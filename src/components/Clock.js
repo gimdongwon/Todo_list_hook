@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const DAYS = ['일', '월', '화', '수', '목', '금', '토'];
