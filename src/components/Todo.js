@@ -23,10 +23,6 @@ function Todo() {
   }, []);
 
   useEffect(() => {
-    setLocalTodoList();
-  }, [todoList]);
-
-  const setLocalTodoList = () => {
     localStorage.setItem(
       'todoList',
       JSON.stringify(
@@ -35,7 +31,7 @@ function Todo() {
         })
       )
     );
-  };
+  }, [todoList]);
 
   // 입력 후 엔터
   const handleInputKeyPress = ({ target, target: { value }, key }) => {
