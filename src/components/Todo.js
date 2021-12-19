@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 
 // Components
@@ -22,7 +22,7 @@ function Todo() {
     );
   }, []);
 
-  useEffect(() => {
+  const saveLocalStorage = useCallback(() => {
     localStorage.setItem(
       'todoList',
       JSON.stringify(
@@ -32,6 +32,10 @@ function Todo() {
       )
     );
   }, [todoList]);
+
+  useEffect(() => {
+    saveLocalStorage();
+  }, [saveLocalStorage]);
 
   // 입력 후 엔터
   const handleInputKeyPress = ({ target, target: { value }, key }) => {
