@@ -4,10 +4,8 @@
 
 ## 실행
 
-```
-npm install
-npm start
-```
+[github](https://github.com/gimdongwon/Todo_list_hook)
+[page_deploy]
 
 ## 주요기능
 
